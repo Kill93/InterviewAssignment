@@ -17,7 +17,7 @@ var pool = mysql.createPool({
 
 app.get('/locationMap', function(req, res, next) {
 
-    var allowedOrigins = ['', 'http://localhost:8000'];
+    var allowedOrigins = ['http://killian-apple.cfapps.io/', 'http://localhost:8000'];
     var origin = req.headers.origin;
     if(allowedOrigins.indexOf(origin) > -1){
         res.setHeader('Access-Control-Allow-Origin', origin);
@@ -66,7 +66,7 @@ app.get('/locationMap', function(req, res, next) {
 
 app.post('/locationYears', function(req, res, next) {
 
-    var allowedOrigins = ['', 'http://localhost:8000'];
+    var allowedOrigins = ['http://killian-apple.cfapps.io/', 'http://localhost:8000'];
     var origin = req.headers.origin;
     if(allowedOrigins.indexOf(origin) > -1){
         res.setHeader('Access-Control-Allow-Origin', origin);
@@ -124,7 +124,7 @@ app.post('/locationYears', function(req, res, next) {
 
 app.get('/locationData', function(req, res, next) {
 
-    var allowedOrigins = ['', 'http://localhost:8000'];
+    var allowedOrigins = ['http://killian-apple.cfapps.io/', 'http://localhost:8000'];
     var origin = req.headers.origin;
     if(allowedOrigins.indexOf(origin) > -1){
         res.setHeader('Access-Control-Allow-Origin', origin);
@@ -177,7 +177,7 @@ app.get('/locationData', function(req, res, next) {
 
 app.post('/getData', function(req, res, next) {
 
-    var allowedOrigins = ['', 'http://localhost:8000'];
+    var allowedOrigins = ['http://killian-apple.cfapps.io/', 'http://localhost:8000'];
     var origin = req.headers.origin;
     if(allowedOrigins.indexOf(origin) > -1){
         res.setHeader('Access-Control-Allow-Origin', origin);
@@ -237,7 +237,7 @@ app.post('/getData', function(req, res, next) {
 
 app.post('/getDayData', function(req, res, next) {
 
-    var allowedOrigins = ['', 'http://localhost:8000'];
+    var allowedOrigins = ['http://killian-apple.cfapps.io/', 'http://localhost:8000'];
     var origin = req.headers.origin;
     if(allowedOrigins.indexOf(origin) > -1){
         res.setHeader('Access-Control-Allow-Origin', origin);
