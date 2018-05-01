@@ -7,14 +7,6 @@ app.use(cors());
 
 var port = process.env.PORT || 4000;
 
-var pool = mysql.createPool({
-    user     : 'bfbf26b860f82d',
-    password : 'bb8328d7',
-    host     : 'us-cdbr-iron-east-05.cleardb.net',
-    database: 'ad_92b7970d9a2aa1d',
-    port     : 3306
-});
-
 app.get('/locationMap', function(req, res, next) {
 
     var allowedOrigins = ['http://killian-apple.cfapps.io/', 'http://localhost:8000'];
