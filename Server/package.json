@@ -1,0 +1,27 @@
+{
+  "name": "appleassignment",
+  "version": "1.0.0",
+  "description": "Killian Nolans assignment for apple interview",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kill93/InterviewAssignment.git"
+  },
+  "author": "killian nolan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kill93/InterviewAssignment/issues"
+  },
+  "homepage": "https://github.com/Kill93/InterviewAssignment#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
