@@ -122,59 +122,6 @@ app.post('/locationYears', function(req, res, next) {
     })
 });
 
-app.get('/locationData', function(req, res, next) {
-
-    var allowedOrigins = ['http://killian-apple.cfapps.io/', 'http://localhost:8000'];
-    var origin = req.headers.origin;
-    if(allowedOrigins.indexOf(origin) > -1){
-        res.setHeader('Access-Control-Allow-Origin', origin);
-    }
-    res.header('Access-Control-Allow-Methods', 'PUT,POST,GET,DELETE,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    res.header('Access-Control-Allow-Credentials', true);
-
-    let sql = "Select * FROM locationData WHERE (timeDate LIKE '2001-05%%%%%%%%%%%%%%%%%') AND (locationID = 'M2')";
-
-    pool.getConnection(function(err, connection) {
-        console.log("connection started")
-        connection.query(sql ,(err, rows) => {
-            if (err) {
-                throw err;
-            }
-
-            if (rows!=null && rows.length>0) {
-                var i
-                var data = []
-                for (i = 0; i < rows.length; i++) {
-
-                    var obj = {
-                        status: "success",
-                        locationID: rows[i].locationID,
-                        timeDate: rows[i].timeDate,
-                        AtmosphericPressure: rows[i].AtmosphericPressure,
-                        WindDirection: rows[i].WindDirection,
-                        WindSpeed: rows[i].WindSpeed,
-                        Gust: rows[i].Gust,
-                    }
-                    data.push(obj)
-                }
-                res.send(data);
-                console.log('Locations found')
-            }
-            else{
-                var obj1 = {
-                    status: "none"
-                }
-                res.send(obj1);
-                console.log('no locations found')
-
-            }
-        });
-        connection.release();
-        console.log("connection ended")
-    })
-});
-
 app.post('/getData', function(req, res, next) {
 
     var allowedOrigins = ['http://killian-apple.cfapps.io/', 'http://localhost:8000'];
