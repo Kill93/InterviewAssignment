@@ -1,6 +1,6 @@
 # applefrontend
 
-> The frontend for apple interview assignment
+> The frontend for interview assignment
 
 ## Build Setup
 
