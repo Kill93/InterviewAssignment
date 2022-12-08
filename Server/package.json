@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Kill93/InterviewAssignment#readme",
   "dependencies": {
     "cors": "^2.8.4",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "mysql": "^2.15.0"
   },
   "devDependencies": {
